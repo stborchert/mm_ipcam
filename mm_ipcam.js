@@ -46,6 +46,7 @@ Module.register('mm_ipcam', {
       wrapper.className = 'ipcams';
 
       var cameras = this.config.cams;
+      console.dir(cameras);
 
       for (var i = 0; i < cameras; i++) {
         var camPreviewWrapper = document.createElement('div');
@@ -73,6 +74,7 @@ Module.register('mm_ipcam', {
         }
         // Add stream path.
         url = url + '/Streaming/channels/2/httpPreview';
+        console.log(url);
         // Create image output.
         var camPreview = document.createElement('img');
         camPreview.src = url;
