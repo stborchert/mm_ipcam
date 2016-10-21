@@ -45,7 +45,7 @@ Module.register('mm_ipcam', {
       var wrapper = document.createElement('div');
       wrapper.className = 'ipcams';
 
-      var cameras = this.getCameras();
+      var cameras = this.config.cams;
 
       for (var i = 0; i < cameras; i++) {
         var camPreviewWrapper = document.createElement('div');
