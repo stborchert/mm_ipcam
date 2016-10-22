@@ -1,0 +1,8 @@
+'*':
+  '*':
+    url_scheme: '{protocol}://{credentials}{base_url}'
+trendnet:
+  '*':
+    url_scheme: '{protocol}://{credentials}{base_url}/Streaming/channels/1/httpPreview'
+  tv_ip310pi:
+    url_scheme: '{protocol}://{credentials}{base_url}/Streaming/channels/{channel}/httpPreview'
