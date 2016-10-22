@@ -13,7 +13,8 @@ Module.register('mm_ipcam', {
         port: '',
         user: '',
         password: '',
-        title: ''
+        title: '',
+        channel: '1',
       }
     ]
   },
@@ -45,7 +46,7 @@ Module.register('mm_ipcam', {
       var wrapper = document.createElement('div');
       wrapper.className = 'ipcams';
 
-      var cameras = this.getCameras();
+      var cameras = this.getCameras() || [];
 
       for (var i = 0; i < cameras.length; i++) {
         var camPreviewWrapper = document.createElement('div');
@@ -72,7 +73,7 @@ Module.register('mm_ipcam', {
           url = url + ':' + cameras[i].port;
         }
         // Add stream path.
-        url = url + '/Streaming/channels/2/httpPreview';
+        url = url + '/Streaming/channels/' + cameras[i].channel + '/httpPreview';
         Log.info('Stream video from url: ' + url);
         // Create image output.
         var camPreview = document.createElement('img');
