@@ -1,0 +1,8 @@
+# Ignore custom camera definition file.
+camera_definitions.custom.yml
+
+# Ignore OSX specific files.
+.DS_Store
+.Trashes
+.TemporaryItems
+.fseventsd
