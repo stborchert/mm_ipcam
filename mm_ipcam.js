@@ -39,7 +39,6 @@ Module.register('mm_ipcam', {
    * Override socketNotificationReceived().
    */
   socketNotificationReceived: function(notification, payload) {
-    Log.info('Notification: ' + notification);
     if (notification === 'MM_IPCAM_DEFINITIONS') {
       this.camera_definitions = payload.definitions;
       this.updateDom();
